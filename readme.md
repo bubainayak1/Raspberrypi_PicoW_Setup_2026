@@ -10,10 +10,10 @@ Project Structure
 -----------------
 pico-examples/
 └── pico_blink_soumen/
-    ├── build/                  # Generated build artifacts (ignored in .gitignore)
-    ├── CMakeLists.txt          # Project build configuration
-    ├── pico_blink.c            # Application source code
-    └── pico_sdk_import.cmake   # SDK import helper
+├── build/                  # Generated build artifacts (ignored in .gitignore)
+├── CMakeLists.txt           # Project build configuration
+├── pico_blink.c            # Application source code
+└── pico_sdk_import.cmake   # SDK import helper
 
 -------------------------------------------------------------------------------
 
