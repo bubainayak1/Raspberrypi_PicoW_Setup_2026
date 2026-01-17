@@ -1,0 +1,36 @@
+# Ignore build directories
+build/
+cmake-build-*/
+
+# Ignore compiled object files and libraries
+*.o
+*.obj
+*.elf
+*.bin
+*.hex
+*.map
+
+# Ignore UF2 firmware files (generated for Pico boards)
+*.uf2
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore CMake cache and generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Ignore backup files
+*~
+*.bak
+
+# Ignore Python cache (if using scripts)
+__pycache__/
+*.pyc
