@@ -127,7 +127,7 @@ set(CMAKE_CXX_STANDARD 17)
 # Pull in Pico SDK
 include(pico_sdk_import.cmake)
 
-project(blink C CXX ASM)
+project(blink_pico_w C CXX ASM)
 
 # Initialise Pico SDK
 pico_sdk_init()
@@ -137,11 +137,19 @@ add_executable(blink
     main.c   # your blink code
 )
 
-# Link standard Pico libraries
-target_link_libraries(blink pico_stdlib)
+# Link standard Pico libraries + Pico W Wi-Fi library
+target_link_libraries(blink 
+    pico_stdlib
+    pico_cyw43_arch_none   # Required for Pico W
+)
 
-# ⚡ Skip picotool / UF2 conversion for now
-# pico_add_extra_outputs(blink)
+# Enable USB serial (recommended)
+pico_enable_stdio_usb(blink 1)
+pico_enable_stdio_uart(blink 0)
+
+# Generate UF2/ELF output
+#pico_add_extra_outputs(blink)
+
 
 ```
 
