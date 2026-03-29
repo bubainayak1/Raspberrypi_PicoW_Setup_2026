@@ -177,7 +177,24 @@ lwIP
 WiFi driver
 FreeRTOS integration
 
+```
+##8. How You Should Navigate (Important)
+```
+🔸 Want WiFi logic?
 
+👉 Go:
+
+lib/cyw43-driver/
+🔸 Want networking?
+
+👉 Go:
+
+lib/lwip/
+🔸 Want GPIO/UART?
+
+👉 Go:
+
+src/rp2_common/hardware_*
 
 
 ```
