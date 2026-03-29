@@ -153,6 +153,35 @@ pico_enable_stdio_uart(blink 0)
 
 ```
 
+---
+## 6. How Your Project Uses SDK
+
+```
+Your project:
+
+include(pico_sdk_import.cmake)
+pico_sdk_init()
+
+👉 This loads:
+
+src/ → hardware drivers
+lib/ → lwIP, WiFi
+
+👉 When you write:
+
+pico_cyw43_arch_lwip_sys_freertos
+
+👉 It pulls:
+
+lwIP
+WiFi driver
+FreeRTOS integration
+
+
+
+
+```
+
 ```main.c
 #include "pico/stdlib.h"
 
